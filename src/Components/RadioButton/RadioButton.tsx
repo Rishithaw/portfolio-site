@@ -9,12 +9,18 @@ const StyledLabel = styled.label`
   gap: 6px;
 `;
 
-const StyledRadio = styled.input<{ disabled?: boolean }>`
+const StyledRadio = styled.input<{ $disabled?: boolean }>`
   accent-color: #007bff;
-  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
+  cursor: ${(props) => (props.$disabled ? 'not-allowed' : 'pointer')};
 `;
 
-export const RadioButton: React.FC<RadioButtonProps> = ({ label, name, value, disabled, onChange }) => {
+export const RadioButton: React.FC<RadioButtonProps> = ({
+  label,
+  name,
+  value,
+  disabled,
+  onChange
+}) => {
   return (
     <StyledLabel>
       <StyledRadio
@@ -22,6 +28,7 @@ export const RadioButton: React.FC<RadioButtonProps> = ({ label, name, value, di
         name={name}
         value={value}
         disabled={disabled}
+        $disabled={disabled}
         onChange={onChange}
       />
       {label}
