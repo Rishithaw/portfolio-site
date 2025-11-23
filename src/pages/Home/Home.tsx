@@ -20,16 +20,16 @@ export const Home: React.FC = () => {
       />
 
       {/* 🔵 ABOUT ME */}
-      <div style={{ margin: "40px", display: "flex", gap: "30px" }}>
-
-        {/* Profile image */}
-        <Img
-          src={profilePic}
-          alt="Rishitha"
-          width="220px"
-          height="220px"
-          disabled={false}
-        />
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <div style={{ marginBottom: "10px" }}>
+          <Img
+            src={profilePic}
+            alt="Rishitha"
+            width="80px"
+            height="80px"
+            disabled={false}
+          />
+        </div>
 
         {/* About text */}
         <Card backgroundColor="#ffffff" disabled={false}>
