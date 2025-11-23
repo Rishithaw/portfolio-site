@@ -1,5 +1,5 @@
 import javaImg from "../assets/Java.png";
-import mysqlImg from "../assets/MySQL.png";
+import mysqlImg from "../assets/Mysql.png";
 import htmlImg from "../assets/HTML.png";
 import cssImg from "../assets/CSS.png";
 import javascriptImg from "../assets/JavaScript.png";
@@ -55,5 +55,5 @@ export const skills = [
     description: "Web development with Rails",
     image: rubyImg,
     link: "https://www.ruby-lang.org/",
-  }
+  },
 ];

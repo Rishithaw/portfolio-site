@@ -1,7 +1,6 @@
 import React from "react";
 import { Card } from "../Card";
 import { Img } from "../Image";
-import { Text } from "../Text";
 import { Label } from "../Label";
 
 export interface SkillCardProps {
@@ -13,21 +12,55 @@ export interface SkillCardProps {
 
 export const SkillCard: React.FC<SkillCardProps> = ({
   name,
-  description,
   image,
   link,
 }) => {
   return (
     <a href={link} target="_blank" rel="noreferrer" style={{ textDecoration: "none" }}>
-      <Card backgroundColor="#f5f1f1ff" disabled={false}>
-        <div style={{ textAlign: "center" }}>
-          <Img src={image} alt={name} width="80px" height="80px" />
+      <Card
+        backgroundColor="#ffffff"
+        disabled={false}
+      >
+        <div
+          style={{
+            padding: "2px",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "12px",
+            minHeight: "120px",
+            transition: "background-color 0.2s ease",
+            backgroundColor: "transparent"
+          }}
+          onMouseEnter={(e) => {
+            (e.currentTarget as HTMLDivElement).style.backgroundColor = "#f5f5f5";
+          }}
+          onMouseLeave={(e) => {
+            (e.currentTarget as HTMLDivElement).style.backgroundColor = "transparent";
+          }}
+        >
+          {/* Icon */}
+          <Img
+            src={image}
+            alt={name}
+            width="64px"
+            height="64px"
+          />
 
-          <Label text={name} color="#00aaff" />
-
-          {description && (
-            <Text content={description} size="14px" color="#ccc" />
-          )}
+          {/* Label */}
+          <div
+            style={{
+              fontSize: "14px",
+              fontWeight: "400",
+              marginTop: "4px",
+            }}
+          >
+            <Label
+              text={name}
+              color="#333"
+            />
+          </div>
         </div>
       </Card>
     </a>
