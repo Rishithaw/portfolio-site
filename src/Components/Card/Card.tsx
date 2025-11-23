@@ -33,7 +33,9 @@ export const Card: React.FC<CardProps> = ({
       $disabled={disabled}
     >
       {title && <h3>{title}</h3>}
-      <p>{content ?? children}</p>
+      {content && <p>{content}</p>}
+      {children}
+
     </StyledCard>
   );
 };
