@@ -1,6 +1,7 @@
 export interface CardProps {
   title?: string;
-  content: React.ReactNode;
+  content?: React.ReactNode;
+  children?: React.ReactNode;
   backgroundColor?: string;
   disabled?: boolean;
 }

@@ -1,20 +1,24 @@
-import React from 'react';
-import skillData from '../../data/skillData';
-import { Table, TableHeader, TableRow, TableCell, TableFooter } from '../../Components/Table';
+import React from "react";
+import { SkillCard } from "../../Components/SkillCard";
+import { skills } from "../../data/skillData";
 
 export const Skills: React.FC = () => {
   return (
-    <div>
-      <h1>Skills</h1>
-      <h3>Languages / Frameworks</h3>
-      <ul>
-        {skillData.languages.map((l) => <li key={l}>{l}</li>)}
-      </ul>
-
-      <h3>Tools</h3>
-      <ul>
-        {skillData.tools.map((t) => <li key={t}>{t}</li>)}
-      </ul>
+    <div style={{
+      padding: "40px",
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
+      gap: "20px"
+    }}>
+      {skills.map((skill, index) => (
+        <SkillCard
+          key={index}
+          name={skill.name}
+          description={skill.description}
+          image={skill.image}
+          link={skill.link}
+        />
+      ))}
     </div>
   );
 };

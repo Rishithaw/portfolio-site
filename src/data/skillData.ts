@@ -1,5 +1,21 @@
-export default {
-  languages: ['Java','MySql','JavaFx','HTML','CSS','JavaScript', 'Python', 'Ruby','JavaScript', 'TypeScript', 'PostgreSQL'],
-  frameworks: ['React', 'Express'],
-  tools: ['Git', 'Docker', 'Storybook', 'VSCode', 'Figma', 'draw.io']
-};
+export const skills = [
+  {
+    name: "Java",
+    description: "Object-oriented backend development",
+    image: "/assets/java.png",
+    link: "https://www.java.com/",
+  },
+  {
+    name: "Python",
+    description: "Scripting and automation",
+    image: "/assets/python.png",
+    link: "https://www.python.org/",
+  },
+  {
+    name: "React",
+    description: "Frontend UI development",
+    image: "/assets/react.png",
+    link: "https://react.dev/",
+  },
+  // add more...
+];

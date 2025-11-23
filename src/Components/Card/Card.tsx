@@ -23,6 +23,7 @@ const StyledCard = styled.div<{ $backgroundColor?: string; $disabled?: boolean }
 export const Card: React.FC<CardProps> = ({
   title,
   content,
+  children,
   backgroundColor,
   disabled,
 }) => {
@@ -32,7 +33,7 @@ export const Card: React.FC<CardProps> = ({
       $disabled={disabled}
     >
       {title && <h3>{title}</h3>}
-      <p>{content}</p>
+      <p>{content ?? children}</p>
     </StyledCard>
   );
 };
