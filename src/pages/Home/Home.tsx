@@ -1,26 +1,112 @@
-import React from 'react';
-import { HeroImage } from '../../Components/HeroImage';
-import { Text } from '../../Components/Text';
-import { Card } from '../../Components/Card';
+import React from "react";
+import { HeroImage } from "../../Components/HeroImage";
+import { Card } from "../../Components/Card";
+import { Img } from "../../Components/Image";
+import { Text } from "../../Components/Text";
+import { Label } from "../../Components/Label";
+import profilePic from "../../assets/Profile.jpg";
+import { education } from "../../data/educationData";
 
 export const Home: React.FC = () => {
   return (
     <div>
+
+      {/* 🔵 HERO SECTION */}
       <HeroImage
-        backgroundImage="/Banner.jpeg"
-        title="Rishitha Wickramasinghe"
-        subtitle="Business Systems Development — Portfolio"
+        backgroundImage="/banner.jpg" // add a banner to public/
+        title="Hi, I'm Rishitha 👋"
+        subtitle="Software Developer • Designer • Learner"
+        disabled={false}
       />
 
-      <section style={{ marginTop: 24 }}>
-        <h2>About me</h2>
-        <Text content="I build web apps using React, TypeScript and create reusable component libraries. This portfolio showcases my course work." />
-      </section>
+      {/* 🔵 ABOUT ME */}
+      <div style={{ margin: "40px", display: "flex", gap: "30px" }}>
 
-      <section style={{ marginTop: 24 }}>
-        <h2>Featured Project</h2>
-        <Card title="Component Library" content="React + Storybook UI component library used across projects." />
-      </section>
+        {/* Profile image */}
+        <Img
+          src={profilePic}
+          alt="Rishitha"
+          width="220px"
+          height="220px"
+          disabled={false}
+        />
+
+        {/* About text */}
+        <Card backgroundColor="#ffffff" disabled={false}>
+          <>
+            <Label text="About Me" color="#007bff" />
+            <Text
+              content="I Full Stack Web Development student with strong technical foundation in JavaScript, React, Java and database management,
+              complemented by hands-on experience building real-world applications. Proven ability to deliver complete solutions from concept to
+              deployment, including API integration, responsive web design and database architecture. Strong problem-solving skills demonstrated
+              through implementing complex algorithms and troubleshooting application issues. Excellent communication and teamwork abilities
+              developed through collaborative work environments. Eager to contribute technical skills while learning from experienced developers
+              in a dynamic co-op setting."
+              size="16px"
+              color="#333"
+            />
+          </>
+        </Card>
+      </div>
+
+      {/* 🔵 EDUCATION */}
+      <div style={{ margin: "60px 40px" }}>
+        <Label text="Education" color="#007bff" />
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(3, 1fr)",
+            gap: "30px",
+            marginTop: "25px",
+          }}
+        >
+          {education.map((edu, index) => (
+            <Card
+              key={index}
+              backgroundColor="#ffffff"
+              disabled={false}
+            >
+              <div
+                style={{
+                  textAlign: "center",
+                  padding: "10px",
+                }}
+              >
+                {/* Logo */}
+                <Img
+                  src={edu.image}
+                  alt={edu.school}
+                  width="110px"
+                  height="110px"
+                />
+
+                {/* Title */}
+                <Label
+                  text={edu.school}
+                  color="#222"
+                />
+
+                {/* Program */}
+                <Text
+                  content={edu.program}
+                  size="15px"
+                  color="#555"
+                />
+
+                {/* Year */}
+                <Text
+                  content={edu.year}
+                  size="13px"
+                  color="#777"
+                />
+              </div>
+            </Card>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
+
+export default Home;
