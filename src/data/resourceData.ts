@@ -1,15 +1,18 @@
+import freecodecamp from '../assets/FreeCodeCamp.jpg';
+import stackoverflow from '../assets/StackOverFlow.png';
+
 const resources = [
   {
     title: 'FreeCodeCamp React Guide',
-    image: '/icons/freecodecamp.png',
+    image: freecodecamp,
     summary: 'Guide on building React projects and portfolios.',
     link: 'https://www.freecodecamp.org/news/build-portfolio-website-react/',
   },
   {
-    title: 'Course Repo',
-    image: '/icons/github.png',
-    summary: 'Collection of course assignments and projects.',
-    link: 'https://github.com/yourusername',
+    title: 'Stack Overflow - Husky Pre-commit Issue',
+    image: stackoverflow,
+    summary: 'Discussion on resolving Husky pre-commit script errors in Git.',
+    link: 'https://stackoverflow.com/questions/71021328/husky-pre-commit-2-cant-open-husky-husky-sh',
   },
 ];
 

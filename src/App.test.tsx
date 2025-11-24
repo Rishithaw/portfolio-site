@@ -4,6 +4,8 @@ import App from './App';
 
 test('renders Home link', () => {
   render(<App />);
-  const linkElement = screen.getByText(/home/i);
-  expect(linkElement).toBeInTheDocument();
+
+  const homeLinks = screen.getAllByText(/home/i);
+
+  expect(homeLinks.length).toBeGreaterThan(0);
 });

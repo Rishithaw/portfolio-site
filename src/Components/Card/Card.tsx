@@ -26,7 +26,7 @@ const StyledCard = styled.div<{
   img {
     width: 50%;
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 2px;
   }
 `;
 
