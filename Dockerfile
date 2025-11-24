@@ -23,7 +23,7 @@ FROM nginx:alpine
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copy production build into nginx folder
-COPY --from=build /Wickramasinghe_Rishitha_final_site/build /usr/share/nginx/html
+COPY --from=build /wickramasinghe_rishitha_final_site/build /usr/share/nginx/html
 
 # Expose required port
 EXPOSE 5575
