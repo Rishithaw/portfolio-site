@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import GithubIcon from '../../assets/socials/Github.png';
+import LinkedInIcon from '../../assets/socials/LinkedIn.jpg';
 
 const FooterContainer = styled.footer`
   background: #ffffff;
@@ -86,7 +88,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/assets/social/github.png" alt="GitHub" />
+          <img src={GithubIcon} alt="GitHub" />
         </a>
 
         <a
@@ -94,7 +96,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/assets/social/linkedin.png" alt="LinkedIn" />
+          <img src={LinkedInIcon} alt="LinkedIn" />
         </a>
       </Socials>
     </FooterContainer>

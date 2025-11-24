@@ -15,7 +15,7 @@ export const Home: React.FC = () => {
     <div>
       {/* 🔵 HERO SECTION */}
       <HeroImage
-        backgroundImage="/banner.jpeg"
+        backgroundImage="/banner.jpg"
         title="Hi, I'm Rishitha 👋"
         subtitle="Software Developer • Designer • Learner"
         disabled={false}
