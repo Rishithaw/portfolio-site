@@ -24,7 +24,7 @@ const StyledCard = styled.div<{
       props.$disabled ? 'none' : '0 6px 12px rgba(0, 0, 0, 0.15)'};
   }
   img {
-    width: 100%;
+    width: 50%;
     border-radius: 10px;
     margin-bottom: 15px;
   }

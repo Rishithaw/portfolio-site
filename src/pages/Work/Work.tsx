@@ -6,7 +6,6 @@ export const Work: React.FC = () => {
   return (
     <div>
       <h1>Work / Course Projects</h1>
-
       <div
         style={{
           display: 'grid',
@@ -25,7 +24,16 @@ export const Work: React.FC = () => {
                 <p>
                   <strong>Tech:</strong> {p.tech.join(', ')}
                 </p>
-                <a href={p.link} target="_blank" rel="noreferrer">
+                <a
+                  href={p.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{
+                    color: '#007bff',
+                    textDecoration: 'none',
+                    fontWeight: '500',
+                  }}
+                >
                   View Project
                 </a>
               </>
