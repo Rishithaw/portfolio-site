@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "Running Prettier..."
+npm run prettier:check || exit 1
+
+echo "Running ESLint..."
+npm run lint || exit 1
+
+echo "Running tests..."
+npm test -- --watchAll=false || exit 1

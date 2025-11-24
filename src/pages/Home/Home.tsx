@@ -1,20 +1,18 @@
-import React, { useState } from "react";
-import { HeroImage } from "../../Components/HeroImage";
-import { Card } from "../../Components/Card";
-import { Img } from "../../Components/Image";
-import { Text } from "../../Components/Text";
-import { Label } from "../../Components/Label";
-import profilePic from "../../assets/Profile.jpg";
-import { education } from "../../data/educationData";
+import React, { useState } from 'react';
+import { HeroImage } from '../../Components/HeroImage';
+import { Card } from '../../Components/Card';
+import { Img } from '../../Components/Image';
+import { Text } from '../../Components/Text';
+import { Label } from '../../Components/Label';
+import profilePic from '../../assets/Profile.jpg';
+import education from '../../data/educationData';
 
 export const Home: React.FC = () => {
-
   // Radio button state
-  const [selectedSection, setSelectedSection] = useState("education");
+  const [selectedSection, setSelectedSection] = useState('education');
 
   return (
     <div>
-
       {/* 🔵 HERO SECTION */}
       <HeroImage
         backgroundImage="/banner.jpeg"
@@ -24,24 +22,25 @@ export const Home: React.FC = () => {
       />
 
       {/* 🔵 ABOUT ME SECTION */}
-      <div style={{
-        display: "flex",
-        alignItems: "center",
-        gap: "40px",
-        padding: "40px",
-        maxWidth: "1400px",
-        margin: "0 auto"
-      }}>
-
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '40px',
+          padding: '40px',
+          maxWidth: '1400px',
+          margin: '0 auto',
+        }}
+      >
         {/* Profile Picture */}
         <div style={{ flexShrink: 0 }}>
           <div
             style={{
-              width: "300px",
-              height: "300px",
-              borderRadius: "50%",
-              overflow: "hidden",
-              boxShadow: "0 4px 12px rgba(0,0,0,0.1)"
+              width: '300px',
+              height: '300px',
+              borderRadius: '50%',
+              overflow: 'hidden',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
             }}
           >
             <Img
@@ -58,7 +57,7 @@ export const Home: React.FC = () => {
         <div style={{ flex: 1 }}>
           <Card backgroundColor="#ffffff" disabled={false}>
             <>
-              <div style={{ fontSize: "28px", fontWeight: "bold" }}>
+              <div style={{ fontSize: '28px', fontWeight: 'bold' }}>
                 <Label text="About Me" color="#007bff" />
               </div>
 
@@ -78,84 +77,101 @@ export const Home: React.FC = () => {
       </div>
 
       {/* 🔵 EDUCATION + WORK EXPERIENCE SECTION */}
-      <div style={{ margin: "60px 40px" }}>
-
+      <div style={{ margin: '60px 40px' }}>
         {/* Radio Buttons */}
-        <div style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "30px",
-          marginBottom: "20px"
-        }}>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '30px',
+            marginBottom: '20px',
+          }}
+        >
           {/* Education Radio */}
-          <label style={{ fontSize: "28px", fontWeight: "bold", cursor: "pointer", color: "#007bff" }}>
+          <label
+            style={{
+              fontSize: '28px',
+              fontWeight: 'bold',
+              cursor: 'pointer',
+              color: '#007bff',
+            }}
+          >
             <input
               type="radio"
               name="section"
               value="education"
               color="#007bff"
-              checked={selectedSection === "education"}
-              onChange={() => setSelectedSection("education")}
-              style={{ marginRight: "10px" }}
+              checked={selectedSection === 'education'}
+              onChange={() => setSelectedSection('education')}
+              style={{ marginRight: '10px' }}
             />
             Education
           </label>
 
           {/* Work Experience Radio */}
-          <label style={{ fontSize: "28px", fontWeight: "bold", cursor: "pointer", color: "#007bff" }}>
+          <label
+            style={{
+              fontSize: '28px',
+              fontWeight: 'bold',
+              cursor: 'pointer',
+              color: '#007bff',
+            }}
+          >
             <input
               type="radio"
               name="section"
               value="work"
               color="#007bff"
-              checked={selectedSection === "work"}
-              onChange={() => setSelectedSection("work")}
-              style={{ marginRight: "10px" }}
+              checked={selectedSection === 'work'}
+              onChange={() => setSelectedSection('work')}
+              style={{ marginRight: '10px' }}
             />
             Work Experience
           </label>
         </div>
 
         {/* EDUCATION CARDS */}
-        {selectedSection === "education" && (
+        {selectedSection === 'education' && (
           <div
             style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(3, 1fr)",
-              gap: "30px",
-              marginTop: "25px",
+              display: 'grid',
+              gridTemplateColumns: 'repeat(3, 1fr)',
+              gap: '30px',
+              marginTop: '25px',
             }}
           >
             {education.map((edu, index) => (
               <Card key={index} backgroundColor="#ffffff" disabled={false}>
                 <div
-                  onClick={() => window.open(edu.url, "_blank")}
+                  onClick={() => window.open(edu.url, '_blank')}
                   role="button"
                   tabIndex={0}
-                  onKeyPress={(e) => {
-                    if ((e as React.KeyboardEvent).key === "Enter") {
-                      window.open(edu.url, "_blank");
+                  onKeyPress={e => {
+                    if ((e as React.KeyboardEvent).key === 'Enter') {
+                      window.open(edu.url, '_blank');
                     }
                   }}
-                  style={{ cursor: "pointer" }}
+                  style={{ cursor: 'pointer' }}
                 >
                   <div
                     style={{
-                      textAlign: "center",
-                      padding: "10px",
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
+                      textAlign: 'center',
+                      padding: '10px',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'center',
                     }}
                   >
                     {/* Logo */}
-                    <div style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      width: "100%",
-                      marginBottom: "15px"
-                    }}>
+                    <div
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        width: '100%',
+                        marginBottom: '15px',
+                      }}
+                    >
                       <Img
                         src={edu.image}
                         alt={edu.school}
@@ -180,19 +196,20 @@ export const Home: React.FC = () => {
         )}
 
         {/* WORK EXPERIENCE */}
-        {selectedSection === "work" && (
+        {selectedSection === 'work' && (
           <Card backgroundColor="#ffffff" disabled={false}>
-            <div style={{
-              padding: "25px",
-              textAlign: "center",
-              fontSize: "20px",
-              fontWeight: "bold"
-            }}>
+            <div
+              style={{
+                padding: '25px',
+                textAlign: 'center',
+                fontSize: '20px',
+                fontWeight: 'bold',
+              }}
+            >
               No Work Experience Yet
             </div>
           </Card>
         )}
-
       </div>
     </div>
   );

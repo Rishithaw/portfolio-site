@@ -1,33 +1,35 @@
-import vscode from "../assets/tools/VsCode.png";
-import drawio from "../assets/tools/Drawio.png";
-import figma from "../assets/tools/Figma.png";
-import scenebuilder from "../assets/tools/SceneBuilder.png";
-import docker from "../assets/tools/Docker.jpeg";
+import vscode from '../assets/tools/VsCode.png';
+import drawio from '../assets/tools/Drawio.png';
+import figma from '../assets/tools/Figma.png';
+import scenebuilder from '../assets/tools/SceneBuilder.png';
+import docker from '../assets/tools/Docker.jpeg';
 
-export const tools = [
+const tools = [
   {
-    name: "Visual Studio Code",
+    name: 'Visual Studio Code',
     image: vscode,
-    link: "https://code.visualstudio.com/",
+    link: 'https://code.visualstudio.com/',
   },
   {
-    name: "Draw.io",
+    name: 'Draw.io',
     image: drawio,
-    link: "https://app.diagrams.net/",
+    link: 'https://app.diagrams.net/',
   },
   {
-    name: "Figma",
+    name: 'Figma',
     image: figma,
-    link: "https://www.figma.com/",
+    link: 'https://www.figma.com/',
   },
   {
-    name: "Scene Builder",
+    name: 'Scene Builder',
     image: scenebuilder,
-    link: "https://gluonhq.com/products/scene-builder/",
+    link: 'https://gluonhq.com/products/scene-builder/',
   },
   {
-    name: "Docker",
+    name: 'Docker',
     image: docker,
-    link: "https://www.docker.com/",
+    link: 'https://www.docker.com/',
   },
 ];
+
+export default tools;

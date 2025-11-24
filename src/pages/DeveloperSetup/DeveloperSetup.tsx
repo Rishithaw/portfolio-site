@@ -1,34 +1,35 @@
-import React from "react";
-import { Card } from "../../Components/Card";
-import { Label } from "../../Components/Label";
-import { Text } from "../../Components/Text";
-import { tools } from "../../data/toolData";
-import { ToolCard } from "../../Components/ToolCard/ToolCard";
+import React from 'react';
+import { Card } from '../../Components/Card';
+import { Label } from '../../Components/Label';
+import { Text } from '../../Components/Text';
+import tools from '../../data/toolData';
+import { ToolCard } from '../../Components/ToolCard/ToolCard';
 import {
   Table,
   TableHeader,
   TableRow,
   TableCell,
-  TableFooter
-} from "../../Components/Table";
+  TableFooter,
+} from '../../Components/Table';
 
 export const DeveloperSetup: React.FC = () => {
   return (
     <div>
-
       {/* 🔵 Tools I Use Section */}
-      <div style={{ marginTop: "50px", textAlign: "center" }}>
-        <h2 style={{ color: "#00aaff", fontSize: "32px", marginBottom: "20px" }}>
+      <div style={{ marginTop: '50px', textAlign: 'center' }}>
+        <h2
+          style={{ color: '#00aaff', fontSize: '32px', marginBottom: '20px' }}
+        >
           Tools I Use
         </h2>
 
         <div
           style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: "35px",
-            flexWrap: "wrap",
-            padding: "10px"
+            display: 'flex',
+            justifyContent: 'center',
+            gap: '35px',
+            flexWrap: 'wrap',
+            padding: '10px',
           }}
         >
           {tools.map((tool, index) => (
@@ -43,7 +44,7 @@ export const DeveloperSetup: React.FC = () => {
       </div>
 
       {/* 🔵 Developer Setup Card */}
-      <div style={{ margin: "40px" }}>
+      <div style={{ margin: '40px' }}>
         <Card backgroundColor="#ffffff" disabled={false}>
           <>
             <Label text="Developer Setup" color="#007bff" />
@@ -56,15 +57,19 @@ export const DeveloperSetup: React.FC = () => {
         </Card>
 
         {/* 🔵 Table Section */}
-        <div style={{ marginTop: "30px" }}>
+        <div style={{ marginTop: '30px' }}>
           <Card backgroundColor="#ffffff" disabled={false}>
             <>
               <Label text="Environment Details" color="#007bff" />
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableCell><strong>Category</strong></TableCell>
-                    <TableCell><strong>Details</strong></TableCell>
+                    <TableCell>
+                      <strong>Category</strong>
+                    </TableCell>
+                    <TableCell>
+                      <strong>Details</strong>
+                    </TableCell>
                   </TableRow>
                 </TableHeader>
 
