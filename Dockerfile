@@ -1,34 +1,31 @@
-# Stage 1: Build both React app and Storybook
+# Stage 1 — Build the portfolio React app
 FROM node:20-alpine AS build
 
-# Set working directory
+# Required working directory name
 WORKDIR /wickramasinghe_rishitha_final_site
 
-# Copy dependencies
+# Copy package.json and package-lock.json
 COPY package*.json ./
 
 # Install dependencies
 RUN npm install
 
-# Copy source code
+# Copy the entire project
 COPY . .
 
-# Build the React app (just to validate it compiles)
+# Build the production React app
 RUN npm run build
 
-# Build Storybook for production (the component library)
-RUN npm run build-storybook
-
-# Stage 2: Serve using nginx
+# Stage 2 — Serve using Nginx
 FROM nginx:alpine
 
-# Copy built app into nginx html directory
+# Replace default nginx config
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Copy Storybook static files into nginx html directory
-COPY --from=build /wickramasinghe_rishitha_ui_garden_build_checks/storybook-static /usr/share/nginx/html
+# Copy production build into nginx folder
+COPY --from=build /Wickramasinghe_Rishitha_final_site/build /usr/share/nginx/html
 
-# Expose port 5575
+# Expose required port
 EXPOSE 5575
 
 # Start nginx
