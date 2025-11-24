@@ -1,17 +1,68 @@
+import terminalProgram from '../assets/projects/Terminal.jpeg';
+import managementSystem from '../assets/projects/Manage.jpeg';
+import ticTacToe from '../assets/projects/Tictactoe.jpg';
+import betterDrive from '../assets/projects/Driving.jpg';
+import imageViewer from '../assets/projects/Gallery.jpg';
+import portfolio from '../assets/projects/Portfolio.png';
+import movieCatalog from '../assets/projects/Movie.jpg';
+import blogSite from '../assets/projects/Blog.png';
+
 const work = [
   {
-    title: 'Component Library',
-    description: 'Reusable React UI components with Storybook and tests.',
-    image: '/project1.png',
-    link: 'https://github.com/your/repo',
-    tech: ['React', 'TypeScript', 'Storybook'],
+    title: 'Terminal Program',
+    description: 'A terminal-run stock management program with authentication.',
+    image: terminalProgram,
+    link: 'https://github.com/Rishithaw/Stock-Management',
+    tech: ['Java'],
+  },
+  {
+    title: 'Management System',
+    description: 'A supermarket system built using MVC architecture.',
+    image: managementSystem,
+    link: 'https://github.com/Rishithaw/gdse-71-mvc',
+    tech: ['Java', 'MVC'],
+  },
+  {
+    title: 'Tic Tac Toe',
+    description: 'Play against an AI using the minimax algorithm.',
+    image: ticTacToe,
+    link: 'https://github.com/Rishithaw/Tic-Tac-Toe',
+    tech: ['Java'],
+  },
+  {
+    title: 'BetterDrive',
+    description: 'A driving school management system.',
+    image: betterDrive,
+    link: 'https://github.com/Rishithaw/Driving_School',
+    tech: ['Java', 'JavaFX', 'MySQL'],
+  },
+  {
+    title: 'Image Viewer',
+    description: 'A basic image viewer application.',
+    image: imageViewer,
+    link: 'https://github.com/Rishithaw/Image-Viewer',
+    tech: ['Java', 'JavaFX'],
   },
   {
     title: 'Portfolio',
-    description: 'This portfolio site built from the component library.',
-    image: '/project2.png',
-    link: 'https://rishitha.vercel.app/',
-    tech: ['React', 'CSS', 'Docker'],
+    description: 'A portfolio website showcasing my work.',
+    image: portfolio,
+    link: 'https://github.com/Rishithaw/Portfolio',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+  },
+  {
+    title: 'Movie Catalog',
+    description: 'Look up information about released movies.',
+    image: movieCatalog,
+    link: 'https://github.com/Rishithaw/Movies',
+    tech: ['React', 'JavaScript'],
+  },
+  {
+    title: 'Blog Site',
+    description: 'A website to manage students and their vehicles.',
+    image: blogSite,
+    link: 'https://github.com/Rishithaw/Final-Project-Web-Dev',
+    tech: ['HTML', 'CSS', 'JavaScript', 'PHP'],
   },
 ];
 

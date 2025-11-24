@@ -6,10 +6,11 @@ export const Work: React.FC = () => {
   return (
     <div>
       <h1>Work / Course Projects</h1>
+
       <div
         style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
           gap: 16,
         }}
       >
@@ -17,6 +18,7 @@ export const Work: React.FC = () => {
           <Card
             key={p.title}
             title={p.title}
+            image={p.image}
             content={
               <>
                 <p>{p.description}</p>

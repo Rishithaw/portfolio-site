@@ -23,6 +23,11 @@ const StyledCard = styled.div<{
     box-shadow: ${props =>
       props.$disabled ? 'none' : '0 6px 12px rgba(0, 0, 0, 0.15)'};
   }
+  img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
 `;
 
 export const Card: React.FC<CardProps> = ({
@@ -31,9 +36,11 @@ export const Card: React.FC<CardProps> = ({
   children,
   backgroundColor,
   disabled,
+  image,
 }) => {
   return (
     <StyledCard $backgroundColor={backgroundColor} $disabled={disabled}>
+      {image && <img src={image} alt={title} />}
       {title && <h3>{title}</h3>}
       {content && <p>{content}</p>}
       {children}
