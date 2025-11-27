@@ -27,7 +27,7 @@ jobs:
 
       # 4️⃣ Run Prettier check
       - name: Run Prettier check
-        # run: npx prettier --check .
+        run: npx prettier --check .
 
       # 5️⃣ Run ESLint check
       - name: Run ESLint check

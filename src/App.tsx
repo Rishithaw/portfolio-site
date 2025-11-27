@@ -12,7 +12,7 @@ export default function App() {
     <BrowserRouter>
       <header
         style={{
-          padding: '20px 40px',
+          // padding: '20px 40px',
           backgroundColor: '#ffffff',
           borderBottom: '2px solid #e0e0e0',
           boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
