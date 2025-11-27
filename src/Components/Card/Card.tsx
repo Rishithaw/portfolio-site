@@ -5,6 +5,7 @@ import { CardProps } from './Card.types';
 const StyledCard = styled.div<{
   $backgroundColor?: string;
   $disabled?: boolean;
+  $imageWidth?: string;
 }>`
   background-color: ${props =>
     props.$disabled ? '#f5f5f5' : props.$backgroundColor || '#fff'};
@@ -23,11 +24,6 @@ const StyledCard = styled.div<{
     box-shadow: ${props =>
       props.$disabled ? 'none' : '0 6px 12px rgba(0, 0, 0, 0.15)'};
   }
-  img {
-    width: 50%;
-    border-radius: 10px;
-    margin-bottom: 2px;
-  }
 `;
 
 export const Card: React.FC<CardProps> = ({
@@ -37,10 +33,25 @@ export const Card: React.FC<CardProps> = ({
   backgroundColor,
   disabled,
   image,
+  imageWidth,
 }) => {
   return (
-    <StyledCard $backgroundColor={backgroundColor} $disabled={disabled}>
-      {image && <img src={image} alt={title} />}
+    <StyledCard
+      $backgroundColor={backgroundColor}
+      $disabled={disabled}
+      $imageWidth={imageWidth}
+    >
+      {image && (
+        <img
+          src={image}
+          alt={title}
+          style={{
+            width: imageWidth || '50%',
+            borderRadius: '10px',
+            marginBottom: '2px',
+          }}
+        />
+      )}
       {title && <h3>{title}</h3>}
       {content && <p>{content}</p>}
       {children}

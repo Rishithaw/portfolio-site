@@ -18,7 +18,12 @@ export const SkillCard: React.FC<SkillCardProps> = ({ name, image, link }) => {
       rel="noreferrer"
       style={{ textDecoration: 'none' }}
     >
-      <Card backgroundColor="#ffffff" disabled={false}>
+      <Card
+        backgroundColor="#ffffff"
+        disabled={false}
+        image={image}
+        imageWidth="0px"
+      >
         <div
           style={{
             padding: '2px',
@@ -41,7 +46,7 @@ export const SkillCard: React.FC<SkillCardProps> = ({ name, image, link }) => {
           }}
         >
           {/* Icon */}
-          <Img src={image} alt={name} width="64px" height="64px" />
+          <Img src={image} alt={name} width="70px" height="70px" />
 
           {/* Label */}
           <div

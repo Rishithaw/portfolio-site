@@ -5,4 +5,5 @@ export interface CardProps {
   backgroundColor?: string;
   disabled?: boolean;
   image?: string;
+  imageWidth?: string;
 }

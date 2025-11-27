@@ -14,6 +14,7 @@ const work = [
     image: terminalProgram,
     link: 'https://github.com/Rishithaw/Stock-Management',
     tech: ['Java'],
+    imageWidth: '100%',
   },
   {
     title: 'Management System',
@@ -21,13 +22,15 @@ const work = [
     image: managementSystem,
     link: 'https://github.com/Rishithaw/gdse-71-mvc',
     tech: ['Java', 'MVC'],
+    imageWidth: '100%',
   },
   {
     title: 'Tic Tac Toe',
     description: 'Play against an AI using the minimax algorithm.',
     image: ticTacToe,
     link: 'https://github.com/Rishithaw/Tic-Tac-Toe',
-    tech: ['Java'],
+    tech: ['Java', 'JavaFX'],
+    imageWidth: '100%',
   },
   {
     title: 'BetterDrive',
@@ -35,6 +38,7 @@ const work = [
     image: betterDrive,
     link: 'https://github.com/Rishithaw/Driving_School',
     tech: ['Java', 'JavaFX', 'MySQL'],
+    imageWidth: '100%',
   },
   {
     title: 'Image Viewer',
@@ -42,6 +46,7 @@ const work = [
     image: imageViewer,
     link: 'https://github.com/Rishithaw/Image-Viewer',
     tech: ['Java', 'JavaFX'],
+    imageWidth: '100%',
   },
   {
     title: 'Portfolio',
@@ -49,6 +54,7 @@ const work = [
     image: portfolio,
     link: 'https://github.com/Rishithaw/Portfolio',
     tech: ['HTML', 'CSS', 'JavaScript'],
+    imageWidth: '100%',
   },
   {
     title: 'Movie Catalog',
@@ -56,6 +62,7 @@ const work = [
     image: movieCatalog,
     link: 'https://github.com/Rishithaw/Movies',
     tech: ['React', 'JavaScript'],
+    imageWidth: '100%',
   },
   {
     title: 'Blog Site',
@@ -63,6 +70,7 @@ const work = [
     image: blogSite,
     link: 'https://github.com/Rishithaw/Final-Project-Web-Dev',
     tech: ['HTML', 'CSS', 'JavaScript', 'PHP'],
+    imageWidth: '100%',
   },
 ];
 

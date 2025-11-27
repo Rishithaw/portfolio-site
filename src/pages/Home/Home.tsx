@@ -6,6 +6,7 @@ import { Text } from '../../Components/Text';
 import { Label } from '../../Components/Label';
 import profilePic from '../../assets/Profile.jpg';
 import education from '../../data/educationData';
+import banner from '../../assets/Banner.jpg';
 
 export const Home: React.FC = () => {
   // Radio button state
@@ -15,7 +16,7 @@ export const Home: React.FC = () => {
     <div>
       {/* 🔵 HERO SECTION */}
       <HeroImage
-        backgroundImage="/banner.jpg"
+        backgroundImage={banner}
         title="Hi, I'm Rishitha 👋"
         subtitle="Software Developer • Designer • Learner"
         disabled={false}
